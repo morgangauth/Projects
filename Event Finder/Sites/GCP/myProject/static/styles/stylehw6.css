@@ -1,0 +1,434 @@
+/*css file for hw36 - gautho@usc.edu*/
+
+/* basic elements */
+
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	background-image: url(background.jpg);
+	background-color: #cccccc;
+	font-family: "Didot", serif;
+	background-size: cover;
+	background-attachment: fixed;
+	justify-content: center;
+	}
+h1 {
+	color: white;
+	text-align:center;
+	font-size: 40px;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+	
+}
+hr {
+	
+}
+
+
+
+#search-box {
+	margin: 30px auto;
+	border-radius: 10px;
+	width: 500px;
+	border: 0px;
+	padding: 20px;
+	background-color: rgba(150, 150, 150, 0.3);
+	backdrop-filter: blur(5px);
+	text-align: left;
+}	
+
+
+.check {
+	color: white;
+	display: inline;
+	padding-left: 2px;
+	
+}
+label {
+	color: #90b9d1;
+	font-size:14px;
+	display: block;
+	font-family: sans-serif;
+	font-kerning: auto;
+	font-weight: 520;
+	margin-right: 10px;
+}
+input {
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: inherit;
+	color: white;
+	text-align: left;
+	padding: 8px 12px;
+	margin: 5px 0 8px;
+	box-sizing: border-box;
+}
+
+input:focus {
+	border-color: #566ea8;
+	outline: 0;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px rgba(102, 175, 233, 0.6);
+}
+
+select:focus {
+	border-color: #566ea8;
+	outline: 0;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px rgba(102, 175, 233, 0.6);
+}
+option { 
+    /* Whatever color  you want */
+    background-color: #33393e;
+}
+select{
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: inherit;
+	color: white;
+	text-align: left;
+	padding:8px 12px;
+	margin: 5px 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+.required-text::after {
+    content: "*";
+    color: red;
+}
+input[type=text] {
+	width: 100%;
+	padding: 8px 12px;
+	margin: 5px 0 8px;
+	box-sizing: border-box;
+}
+input[type=checkbox] {
+	margin-top: 0px;
+}
+
+.row {
+	display: block;
+	overflow: hidden;
+}
+.side-by-side-left {
+	width: 50%;
+	padding: 0px;
+	float: left;
+	
+}
+
+.uneven-left {
+	width: 40%;
+}
+.side-by-side-right {
+	width: 50%;
+	padding: 0px;
+	float: right;
+	
+}
+.uneven-right {
+	width: 60%;
+}
+.side-by-side-tight {
+	width: auto;
+	padding: 0px;
+	float: left;
+	
+}
+button {
+	display: inline-block;
+	 text-transform: uppercase;
+	 font-family: "Verdana", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+  padding: 13px 25px;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+
+}
+
+button:hover {
+	 filter: brightness(120%);
+	
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#search-button {
+	background-color: #ed752f;
+	box-shadow: 0 5px #e85928;
+	
+}
+#clear-button {
+	background-color: #566ea8;
+	box-shadow: 0 5px #3c4c75;
+}
+#results {
+	background-color: white;
+	font-size:14px;
+	text-align:center;
+	font-family: sans-serif;
+	padding: 0px;
+	display: none;
+	justify-content: center;
+	margin: 40px auto;
+	width: 900px;
+}
+
+#results a:link { color: inherit; text-decoration: none; }
+#results a:visited { color: inherit; }
+#results a:hover { color: mediumblue; cursor: grab;}
+#results a:active { color: mediumblue; }
+
+
+
+#noRecords {
+	color: red;
+	display: none;
+	padding: 15px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	vertical-align: middle;
+}
+
+thead {
+	font-weight: bold;
+	box-shadow: 2px 2px 5px grey;
+}
+
+thead:hover {
+	cursor: pointer;
+}
+tbody:hover {
+	cursor: initial;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+img {
+	width: 80px;
+}
+
+.dateCol{
+	font-weight: normal;
+}
+.iconCol{
+	
+}
+.eventCol{
+	
+	font-weight: normal;
+}
+.genreCol{
+	
+	font-weight: normal;
+}
+.venueCol{
+	
+	font-weight: normal;
+}
+
+#eventDetails {
+	display: none;
+	margin: 30px auto 15px;
+	border-radius: 10px;
+	width: 750px;
+	border: 0px;
+	padding: 20px;
+	background-color: rgba(150, 150, 150, 0.3);
+	backdrop-filter: blur(5px);
+	text-align: left;
+	font-family: sans-serif;
+	color: white;
+	font-size: 13px;
+}
+
+
+#eventBuy{
+	margin-bottom: 10px;
+}
+
+#eventDetails a:link { color: #90b9d1; text-decoration: none; }
+#eventDetails a:visited { color: #90b9d1; }
+#eventDetails a:hover { color: #CBC3E3;}
+#eventDetails a:active { color: #CBC3E3; }
+
+#eventTitle {
+	text-align: center;
+	font-weight: normal;
+	font-size: 30px;
+	color: white;
+	font-family: sans-serif;
+	width: 100%;
+	margin: 5px 0px 20px;
+	
+}
+
+.eventLabel {
+	font-size: 18px;
+	color: #a4eed8;
+	font-weight: normal;
+	display: block;
+	margin: 5px 0px;
+}
+
+#showVenueDetails {
+	font-family: sans-serif;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	display: none;
+	font-weight: lighter;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.carat {
+	border-style: solid;
+	transform: rotate(45deg);
+	border-color: white;
+	height: 20px;
+	width: 20px;
+	border-width: thin;
+	margin: 0px auto;
+	border-top:none;
+    border-left:none;
+}
+
+.carat:hover {
+	filter: brightness(200%);
+	border-width: medium;
+}
+
+#carat-link a:link {text-decoration: none; }
+#carat-link a:visited { color: inherit; }
+#carat-link a:hover {filter: brightness(200%); cursor: grab;}
+#carat-link a:active { color: mediumblue; }
+
+#venueDetails {
+	display: none;
+	margin: 30px auto 15px;
+	border-radius: 10px;
+	width: 790px;
+	background-color: white;
+	overflow: hidden;
+	font-family: sans-serif;
+	font-size: 15px;
+	text-align: center;
+	color: black;
+}
+
+#venueDetails img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#venueDetails a:link {text-decoration: none; color: #5a97b1}
+#venueDetails a:visited { color: #5a97b1; }
+#venueDetails a:hover {color: #58537a; filter: brightness(200%); cursor: grab;}
+#venueDetails a:active { color: #58537a; }
+
+#innerVenue{
+	box-sizing: border-box; 
+	border-radius: 10px;
+	width: 780px;
+	background-color: white;
+	border: 1px solid black;
+	padding: 20px;
+	margin: 5px;
+	color: black;
+	font-weight: normal;
+	font-family: Arial, sans-serif;
+}
+#innerVenue h1 {
+	text-decoration: underline;
+	font-size: 25px;
+	text-align: center;
+	color: black;
+	text-underline-offset: 25%;
+	text-decoration-thickness: 1px;
+	margin: 0px auto 20px;
+	font-weight: 500;
+}
+
+#innerVenue h1:after {
+    content: "\00a0";
+}
+#innerVenue h1:before {
+    content: "\00a0";
+}
+
+.address-box {
+	border-right: 1px solid black;
+}
+.address-label {
+	font-weight: bold;
+	width: 40%;
+	text-align: right;
+}
+
+.address-label:after {
+    content: "\00a0";
+}
+
+#venueAddress {
+	text-align: left;
+	width: 60%;
+	margin-bottom: 10px;
+}
+
+#moreEvents{
+	vertical-align: top;
+	display: inline-block;
+}
+
+#ticketStatus {
+	border-radius: 10px;
+	height: 20px;
+	display: none;
+	text-transform: capitalize;
+	padding: 5px 8px 3px;
+	width:fit-content;
+	margin-bottom: 5px;
+}
+
+#eventMap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-40%);
+}
+
+#eventMap img{
+	width: 100%;
+	max-height: 350px;
+}
+
+#venueImg {
+	margin: 10px auto;
+	padding: 0px;
+	width: 100px;
+}
+
+.eventToFill {
+	margin: 0px 0px 10px;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HW6</title>
+<link rel="stylesheet" type="text/css" href= "styles/stylehw6.css">
+</head>
+<body>
+<script type="module">
+import Geohash from "https://cdn.jsdelivr.net/npm/latlon-geohash@2.0.0";
+window.encode = Geohash.encode;
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="scripts.js"></script>
+
+<div id="search-box">
+
+<h1>Events Search </h1>
+
+<hr>
+<br>
+<form id="form1">
+  <label class="required-text" for="keyword">Keyword</label>
+  <input type="text" id="keyword" name="keyword"  required >
+  <div class="row"> 
+  <div class="side-by-side-left">
+  <label for="distance">Distance (miles)</label>
+  <input type="number" id="distance" name="distance" min="0" placeholder="10">
+  </div>
+  <div class="side-by-side-right">
+  <label class="required-text" for="category">Category</label>
+    <select id="category" name="category" required>
+	<option value="default" selected>Default</option>
+    <option value="music">Music</option>
+    <option value="sports">Sports</option>
+    <option value="arts">Arts & Theatre </option>
+    <option value="film">Film</option>
+	<option value="misc">Miscellaneous</option>
+  </select>
+  </div>
+  </div>
+  <div class="row">
+  <div class="side-by-side-tight">
+  <label class="required-text" for="location">Location</label>
+  </div>
+  <div class="side-by-side-tight">
+  <input type="checkbox" id="autolocation" name="autolocation" value="true" onclick="ShowHideDiv(this)" >
+  <label class="check" for="autolocation"> Auto-Detect Location</label><br>
+  </div>
+  <input type="text" id="location" name="location"  required >
+  </div>
+  <br>
+  <button id="search-button" type="button" onclick="searchButton()">Search</button>
+  <button id="clear-button" type="button" onclick="clearButton()" formnovalidate>Clear</button>
+  
+
+</form>
+
+</div>
+
+
+
+<div id="results">
+  <div id="noRecords">
+  No Records found
+  </div>
+  <table id="searchResults">
+  <thead>
+  <tr>
+    <th style="width:15%">Date</th>
+    <th style="width:15%">Icon</th>
+    <th onclick="sortTable(2)" style="width:45%">Event</th>
+	<th onclick="sortTable(3)" style="width:10%">Genre</th>
+	<th onclick="sortTable(4)" style="width:20%">Venue</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+</div>
+  <div id="eventDetails">
+  <p id="eventTitle"> </p>
+  <div class = "row" >
+  <div class="side-by-side-left uneven-left">
+  <div id = "eventDate">
+  <p class="eventLabel"> Date </p> 
+  <p class="eventToFill"></p>
+  </div>
+  <div id = "eventArtist">
+  <p class="eventLabel"> Artist/Team </p>
+  <p class="eventToFill"></p>
+  </div>
+  <div id = "eventVenue">
+  <p class="eventLabel"> Venue </p>
+  <p class="eventToFill"></p>
+  </div>
+  <div id = "eventGenres">
+  <p class="eventLabel"> Genres </p>
+  <p class="eventToFill"></p>
+  </div>
+  <div id = "eventPrice">
+  <p class="eventLabel"> Price Ranges </p>
+  <p class="eventToFill"></p>
+  </div>
+  <div id = "eventTicket">
+  <p class="eventLabel"> Ticket Status </p>
+  <div id = "ticketStatus"> </div>
+  </div>
+  <div id = "eventBuy">
+  <p class="eventLabel"> Buy Ticket At: </p>
+  <a target="_blank">Ticketmaster</a>
+  </div>
+  </div>
+  <div class="side-by-side-right uneven-right">
+  <div id = "eventMap">
+  </div>
+  </div>
+  </div>
+  </div>
+  <div id="showVenueDetails">
+  Show Venue Details
+  <a id="carat-link" href="#" onclick="return false;">
+  <div class="carat"></div>
+  </div>
+  </a>
+  <div id="venueDetails">
+  <div id="innerVenue">
+  <h1 id = "venueName"></h1>
+  <img id="venueImg">
+  <div class="row">
+  <div class="side-by-side-left address-box">
+  <div class="row">
+  <div class="side-by-side-left address-label">
+  Address: 
+  </div>
+  <div id="venueAddress" class="side-by-side-right">
+  </div>
+  </div>
+  <a id="googleLink" target="_blank"> Open in Google Maps </a>
+  </div>
+  <div id="moreEvents">
+  <a target="_blank"> More events at this venue </a>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+</body>
+</html>

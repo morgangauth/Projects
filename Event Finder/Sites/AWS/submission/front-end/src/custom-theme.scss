@@ -1,0 +1,60 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$hw8-primary: mat.define-palette(mat.$indigo-palette, 500);
+$hw8-accent: mat.define-palette(mat.$teal-palette, A700, A200, A700);
+
+// The warn palette is optional (defaults to red).
+$hw8-warn: mat.define-palette(mat.$red-palette, A700);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$hw8-theme: mat.define-light-theme((
+  color: (
+    primary: $hw8-primary,
+    accent: $hw8-accent,
+    warn: $hw8-warn,
+  ),
+  // typography: mat.define-typography-config(),
+   density: 0,
+));
+
+// Function that changes the theme text color from black to white
+@function app-light-theme-foreground($color) {
+   @return (
+  base:$color,
+    divider:rgba($color, 0.38),
+    dividers:     rgba($color, 0.38),
+    disabled:     rgba($color, 0.38),
+    disabled-button:  rgba($color, 0.38),
+    disabled-text:   rgba($color, 0.38),
+    hint-text:     rgba($color, 0.38),
+    secondary-text:  rgba($color, 0.54),
+    icon:       rgba($color, 0.54),
+    icons:       rgba($color, 0.54),
+    text:       rgba($color, 0.87),
+    slider-off:    rgba($color, 0.26),
+    slider-off-active: rgba($color, 0.38),
+    slider-min:    rgba($color, 0.38)
+   );
+  };
+
+$white-foreground: app-light-theme-foreground(white);
+$my-app-theme-custom: map-merge($hw8-theme, (foreground: $white-foreground));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($hw8-theme);
+

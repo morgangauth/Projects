@@ -1,0 +1,6 @@
+.text-label-color {
+	color: #6ce5ce;
+}
+
+@media (max-width:400px) { .no-fave { width: 75% !important;} 
+.faves{width: 100% !important;}}
