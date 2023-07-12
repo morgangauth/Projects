@@ -10,6 +10,8 @@ The site functionality consists of a search page with 5 different parameters, in
 
 For code samples, please contact morgan.gautho@gmail.com. 
 
+For alternative version of the site hosted on GCP, please [click here](https://github.com/morgangauth/Projects/tree/main/Event%20Finder/Sites/GCP).
+
 Images can be found below:
 
 ![img1](images/site1.png)
