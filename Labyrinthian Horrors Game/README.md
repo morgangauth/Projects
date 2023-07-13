@@ -6,11 +6,13 @@ It was built on Unity with the collaboration of Cameron Witz, David Szymulewski,
 
 For code samples, please reach out to morgan.gautho@gmail.com.
 
+Game link: https://jaydeepgodbole.github.io/MCDJS_final/
+
 Skip to 2:10 for game footage.
 
 https://github.com/morgangauth/Projects/assets/113058716/ed3c2266-0c20-4f18-b664-3beb3e0509b6
 
-Game link: https://jaydeepgodbole.github.io/MCDJS_final/
+
 
 Images below:
 ![game1](https://github.com/morgangauth/Projects/assets/113058716/c4d04f30-ef7a-42b1-bbb8-abecf976a184)
